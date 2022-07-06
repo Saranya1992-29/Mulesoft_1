@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="4e7e9d59-b2fc-4c8a-9ef6-62a83ae083ac" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="ass-git-jenkinsFlow" doc:id="6cb1ea5f-2d71-447a-b970-a49bd8240636" >
+		<http:listener doc:name="Listener" doc:id="9ce6e590-ab72-4b6b-95ed-878fdd67ad55" config-ref="HTTP_Listener_config" path="/agj"/>
+		<logger level="INFO" doc:name="Logger" doc:id="c3c42e92-3cf5-4171-b037-2e8f1f402603" message="Reached Git Project"/>
+		<set-payload value="Reached git project" doc:name="Set Payload" doc:id="89e43c37-8c2f-4654-9d31-9effd6eb163b" />
+	</flow>
+</mule>
