@@ -3,15 +3,16 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
-	<artifactId>ass-git-jenkins</artifactId>
+	<artifactId>ass-git-final</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
-	<name>ass-git-jenkins</name>
+	<name>ass-git-final</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
 		<app.runtime>4.4.0-20220221</app.runtime>
 		<mule.maven.plugin.version>3.5.4</mule.maven.plugin.version>
 	</properties>
@@ -28,21 +29,19 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
-			<configuration>
+					<configuration>
 			<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>${mule.version}</muleVersion>
+						<muleVersion>4.4.0</muleVersion>
 						<!-- Deploy Using Parameter  -->
-						<username>${anypoint.username}</username>
-						<password>${anypoint.password}</password>
-<applicationName>mulesoft-jenkins-ci-cd</applicationName>
-						<environment>${anypoint.environment}</environment>
-						
-						<properties>
-						<key>value</key>
-						</properties>
+						<username>kotasaranya1992</username>
+						<password>Enique@2022!</password>
+<applicationName>mule-jenkin-git-ci-cd</applicationName>
+						<environment>Sandbox</environment>
+					<objectStoreV2>true</objectStoreV2>
 					</cloudHubDeployment>
 			</configuration>
+				
 			</plugin>
 		</plugins>
 	</build>
